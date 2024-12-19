@@ -7,6 +7,8 @@ def file_lines_to_list(filename):
         for line in lines:
             if line[-1] == "\n":
                 trimmed_lines.append(line[:-1])
+            else:
+                trimmed_lines.append(line)
         return trimmed_lines
     
 # Part one - sum the middle page number of all correctly-ordered groups of pages
