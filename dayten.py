@@ -19,7 +19,7 @@ def get_trail_score_sum(filename):
     trailhead_locs = [(r, c) for r in range(len(map)) for c in range(len(map[r])) if map[r][c] == 0]
     trailtail_locs = [(r, c) for r in range(len(map)) for c in range(len(map[r])) if map[r][c] == 9]
 
-    #          ^       >       <       v
+    #          ^       >       v       <
     dirs = ((-1, 0), (0, 1), (1, 0), (0, -1))
 
     # This helper function takes a trailhead -> trailtail pair, and determines whether it's possible to move between them step by step
@@ -70,7 +70,8 @@ def get_trail_rating_sum(filename):
 
     # First, parse out all the trailheads (0s) from the map
     trailhead_locs = [(r, c) for r in range(len(map)) for c in range(len(map[r])) if map[r][c] == 0]
-
+    
+    #          ^       >       v       <
     dirs = ((-1, 0), (0, 1), (1, 0), (0, -1))
 
     # This helper function takes one movement and sums all the trails that can be found from then on
